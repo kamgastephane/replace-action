@@ -22,8 +22,7 @@ try {
           var kv = vars[i].split('=')
           var key = kv[0]
           var value = kv[1]
-          var re = new RegExp(key, 'g');
-          result = result.replace(re, value)
+          result = result.replaceAll(key, value)
         }
         console.log('file2: '+filename)
         fs.writeFile(filename, result, 'utf8', function (err) {
