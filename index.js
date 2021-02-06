@@ -23,7 +23,7 @@ try {
           var key = kv[0]
           var value = kv[1]
           var regx = new RegExp(key, "g")
-          result = result.replaceAll(regx, value)
+          result = result.replace(regx, value)
         }
         console.log('file2: '+filename)
         fs.writeFile(filename, result, 'utf8', function (err) {
